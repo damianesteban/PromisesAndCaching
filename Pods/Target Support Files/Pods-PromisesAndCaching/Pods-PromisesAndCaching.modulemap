@@ -1,0 +1,6 @@
+framework module Pods_PromisesAndCaching {
+  umbrella header "Pods-PromisesAndCaching-umbrella.h"
+
+  export *
+  module * { export * }
+}
