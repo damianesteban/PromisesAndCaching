@@ -9,9 +9,10 @@
 import Foundation
 import Decodable
 
-struct User: ResponseObject {
+
+struct FullModel {
     let name: String
-    let username: String
+    let email: String
     let title: String
     let id: Int
     let userId: Int
@@ -19,11 +20,11 @@ struct User: ResponseObject {
     let completed: Bool
 }
 
-extension User: Decodable {
-    static func decode(_ json: Any) throws -> User {
-        return try User(
+extension FullModel: Decodable {
+    static func decode(_ json: Any) throws -> FullModel {
+        return try FullModel(
             name: json => "name",
-            username: json => "username",
+            email: json => "email",
             title: json => "title",
             id: json => "id",
             userId: json => "userId",

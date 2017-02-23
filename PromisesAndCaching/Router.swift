@@ -11,10 +11,11 @@ import Cache
 import RNCryptor
 import then
 import Decodable
+import Dotzu
 
-let cache = NSCache<AnyObject, AnyObject>()
 
 typealias JSONDictionary = [String: Any]
+
 // Resource Error
 enum ResourceError: Error {
     case invalidBaseURL
@@ -77,7 +78,7 @@ enum GisterAPI {
     case posts
     case albums
     case todos
-    case users
+    case comments
 }
 
 // Conforms to Resource.
@@ -97,8 +98,8 @@ extension GisterAPI: Resource {
             return "albums/1"
         case .todos:
             return "todos/1"
-        case .users:
-            return "users/1"
+        case .comments:
+            return "comments/1"
         }
     }
 }
@@ -109,17 +110,21 @@ class NetworkService {
     private let baseURL = URL(string: "https://jsonplaceholder.typicode.com/")!
     private let session: URLSession
     
-    init(configuration: URLSessionConfiguration = URLSessionConfiguration.default) {
-        self.session = URLSession(configuration: configuration)
+    init(session: URLSession = URLSession.shared) {
+        self.session = session
+        
     }
     
-    // Returns a Result type of Data via URLSession
+    // Returns a Promise of type JSONDictionary
     func fetch(resource: GisterAPI, mergeWith dictionary: JSONDictionary) -> Promise<JSONDictionary> {
+        
         return Promise { resolve, reject in
-        let request = resource.requestWithBaseURL(baseURL: self.baseURL)
-        let task = self.session.dataTask(with: request) { data, response, error in
+            
+            let request = resource.requestWithBaseURL(baseURL: self.baseURL)
+            let task = self.session.dataTask(with: request) { data, response, error in
             
             if let error = error {
+                // Reject
                 reject(error)
             } else {
                 
@@ -128,11 +133,14 @@ class NetworkService {
                 }
                 
                 if 200 ..< 300 ~= HTTPResponse.statusCode {
+                    // Don't do this
                     let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! JSONDictionary
                     print(json)
               
                     let dict = dictionary.merged(with: json)
+                    
                     print("Dictionary now contains: \(dict)")
+                    // Resolve
                     resolve(dict)
                 }
                     
@@ -146,8 +154,9 @@ class NetworkService {
         }
     }
     
+    // Individual Promises
     func fetchOne(dictionary: JSONDictionary) -> Promise<JSONDictionary> {
-        return fetch(resource: .users, mergeWith: dictionary)
+        return fetch(resource: .comments, mergeWith: dictionary)
     }
     
     func fetchTwo(dictionary: JSONDictionary) -> Promise<JSONDictionary> {
@@ -161,5 +170,18 @@ class NetworkService {
     func fetchFour(dictionary: JSONDictionary) -> Promise<JSONDictionary> {
         return fetch(resource: .posts, mergeWith: dictionary)
     }
+    
+    func model(from jsonDictionary: JSONDictionary) -> Promise<FullModel> {
+        return Promise { resolve, reject in
+            do {
+                let fullModel = try FullModel.decode(jsonDictionary)
+                print(fullModel)
+                resolve(fullModel)
+            } catch {
+                reject(NetworkServiceError.decodeJSONError)
+            }
+        }
+    }
+    
 }
     

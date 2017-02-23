@@ -3,6 +3,8 @@ PODS:
     - CryptoSwift
   - CryptoSwift (0.6.7)
   - Decodable (0.5)
+  - Dotzu (0.7)
+  - DVR (1.0.0)
   - Realm (2.4.2):
     - Realm/Headers (= 2.4.2)
   - Realm/Headers (2.4.2)
@@ -15,21 +17,35 @@ PODS:
 DEPENDENCIES:
   - Cache
   - Decodable
+  - Dotzu
+  - DVR (from `https://github.com/ksteigerwald/DVR.git`, commit `801846b0168a06a84c5ec51c3a7577b2cc6237aa`)
   - RealmSwift
   - Result
   - RNCryptor
   - thenPromise
 
+EXTERNAL SOURCES:
+  DVR:
+    :commit: 801846b0168a06a84c5ec51c3a7577b2cc6237aa
+    :git: https://github.com/ksteigerwald/DVR.git
+
+CHECKOUT OPTIONS:
+  DVR:
+    :commit: 801846b0168a06a84c5ec51c3a7577b2cc6237aa
+    :git: https://github.com/ksteigerwald/DVR.git
+
 SPEC CHECKSUMS:
   Cache: 5b2d2d68477bd9c5b8e539d673cc217ed1284814
   CryptoSwift: 685ae257941e5447474348a2b545583e1a16b573
   Decodable: 7c90acc68d357b71d0d6efc120faf9c53c644b7e
+  Dotzu: f4d99abb2d3bdcc0667ba14e225bc0a76105d6a7
+  DVR: e8c081441f7ed93f40ff2394fa29f42a1415e01d
   Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
   RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
   RNCryptor: 2e352a488779d1a9184ab629be22a7c5bc84acb5
   thenPromise: af88062b35e1e691d1ebfc96b761b5a6f37a378b
 
-PODFILE CHECKSUM: dea0fd3071cd34b96b07371356e0760615503c04
+PODFILE CHECKSUM: 2d00b356ed73f4fc1ff208244373028883cee233
 
 COCOAPODS: 1.2.0

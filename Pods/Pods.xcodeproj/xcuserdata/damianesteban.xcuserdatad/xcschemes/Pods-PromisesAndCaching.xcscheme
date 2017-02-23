@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EDF7A048A6AEDB29824806574A045B5B"
+               BlueprintIdentifier = "4E03569A54BD48379645AA7D4412CE66"
                BuildableName = "Pods_PromisesAndCaching.framework"
                BlueprintName = "Pods-PromisesAndCaching"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EDF7A048A6AEDB29824806574A045B5B"
+            BlueprintIdentifier = "4E03569A54BD48379645AA7D4412CE66"
             BuildableName = "Pods_PromisesAndCaching.framework"
             BlueprintName = "Pods-PromisesAndCaching"
             ReferencedContainer = "container:Pods.xcodeproj">

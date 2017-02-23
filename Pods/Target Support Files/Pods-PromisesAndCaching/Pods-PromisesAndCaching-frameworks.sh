@@ -91,7 +91,9 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Cache/Cache.framework"
   install_framework "$BUILT_PRODUCTS_DIR/CryptoSwift/CryptoSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DVR/DVR.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Decodable/Decodable.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Dotzu/Dotzu.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RNCryptor/RNCryptor.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
@@ -101,7 +103,9 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Cache/Cache.framework"
   install_framework "$BUILT_PRODUCTS_DIR/CryptoSwift/CryptoSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DVR/DVR.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Decodable/Decodable.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Dotzu/Dotzu.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RNCryptor/RNCryptor.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"

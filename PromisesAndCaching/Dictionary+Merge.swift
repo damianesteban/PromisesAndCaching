@@ -10,11 +10,7 @@ import Foundation
 
 // Extension to merge dictionaries
 extension Dictionary {
-    
-    mutating func merge(with dictionary: Dictionary) {
-        dictionary.forEach { updateValue($1, forKey: $0) }
-    }
-    
+
     func merged(with dictionary: Dictionary<Key,Value>) -> Dictionary<Key,Value> {
         var copy = self
         dictionary.forEach {
@@ -22,4 +18,5 @@ extension Dictionary {
         }
         return copy
     }
+    
 }

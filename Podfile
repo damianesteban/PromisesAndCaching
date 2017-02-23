@@ -10,6 +10,9 @@ target 'PromisesAndCaching' do
   pod 'Result'
   pod 'RealmSwift'
   pod 'RNCryptor'
+  pod 'Dotzu'
+  pod 'DVR', :git => 'https://github.com/ksteigerwald/DVR.git', :commit => '801846b0168a06a84c5ec51c3a7577b2cc6237aa'
+
   # Pods for PromisesAndCaching
 
   target 'PromisesAndCachingTests' do

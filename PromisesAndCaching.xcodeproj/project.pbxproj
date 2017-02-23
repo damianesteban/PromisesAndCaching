@@ -10,7 +10,6 @@
 		8C077F2F51D5BE26A122FC12 /* Pods_PromisesAndCaching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8599D1BFC1CE4D0B6076F26D /* Pods_PromisesAndCaching.framework */; };
 		E4B73D81C5CB4EBB99C49F22 /* Pods_PromisesAndCachingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D275F61AD1AADA755FF44D25 /* Pods_PromisesAndCachingTests.framework */; };
 		FB486ED21E552F1500438291 /* Opttional+NilErrorUnwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB486ED11E552F1500438291 /* Opttional+NilErrorUnwrap.swift */; };
-		FB486ED51E552F7800438291 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB486ED41E552F7800438291 /* ResponseObject.swift */; };
 		FB7BA94C1E4FA27100768439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BA94B1E4FA27100768439 /* AppDelegate.swift */; };
 		FB7BA94E1E4FA27100768439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BA94D1E4FA27100768439 /* ViewController.swift */; };
 		FB7BA9511E4FA27100768439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7BA94F1E4FA27100768439 /* Main.storyboard */; };
@@ -41,7 +40,6 @@
 		D275F61AD1AADA755FF44D25 /* Pods_PromisesAndCachingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PromisesAndCachingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB486ED11E552F1500438291 /* Opttional+NilErrorUnwrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Opttional+NilErrorUnwrap.swift"; sourceTree = "<group>"; };
 		FB486ED31E552F2F00438291 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
-		FB486ED41E552F7800438291 /* ResponseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
 		FB7BA9481E4FA27100768439 /* PromisesAndCaching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PromisesAndCaching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7BA94B1E4FA27100768439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB7BA94D1E4FA27100768439 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				FB7BA96F1E4FAAB400768439 /* Models.swift */,
-				FB486ED41E552F7800438291 /* ResponseObject.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -374,7 +371,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB486ED21E552F1500438291 /* Opttional+NilErrorUnwrap.swift in Sources */,
-				FB486ED51E552F7800438291 /* ResponseObject.swift in Sources */,
 				FB7BA94E1E4FA27100768439 /* ViewController.swift in Sources */,
 				FB7BA96D1E4FA87B00768439 /* Router.swift in Sources */,
 				FB7BA94C1E4FA27100768439 /* AppDelegate.swift in Sources */,
